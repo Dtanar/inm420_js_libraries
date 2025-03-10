@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerOut - Discover Your Journey</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS CSS for scroll animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Glide.js CSS for carousels -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.5.0/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.5.0/css/glide.theme.min.css">
+
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="#" class="logo">Inner<span>Out</span></a>
+            <div></div> <!-- Placeholder to maintain flex justify-between -->
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <button class="sidebar-close" aria-label="Close sidebar">
+            <span></span>
+        </button>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#hero"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#destinations"><i class="fas fa-map-marker-alt"></i> Destinations</a></li>
+                <li><a href="#testimonials"><i class="fas fa-comment"></i> Testimonials</a></li>
+                <li><a href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="#explore"><i class="fas fa-compass"></i> Explore</a></li>
+                <li><a href="#map-section"><i class="fas fa-map"></i> Map</a></li>
+                <li><a href="#newsletter"><i class="fas fa-envelope"></i> Newsletter</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div id="hero-canvas" class="hero-canvas"></div>
+            <div class="container">
+                <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="text-content">
+                        <h1>Discover Your Inner Journey, Experience the Outer World</h1>
+                        <p>Personalized travel experiences that transform your perspective and enrich your soul.</p>
+                        <a href="#destinations" class="btn">Explore Destinations</a>
+                    </div>
+
+                    <div class="hero-form" data-aos="fade-up" data-aos-delay="300">
+                        <h3>Plan Your Adventure</h3>
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="destination">Where to?</label>
+                                    <input type="text" id="destination" placeholder="Search destination">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dates">When?</label>
+                                    <input type="text" id="dates" placeholder="Select dates">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="travelers">Travelers</label>
+                                    <select id="travelers">
+                                        <option value="1">1 Person</option>
+                                        <option value="2">2 People</option>
+                                        <option value="3">3 People</option>
+                                        <option value="4">4+ People</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="type">Experience Type</label>
+                                    <select id="type">
+                                        <option value="adventure">Adventure</option>
+                                        <option value="cultural">Cultural</option>
+                                        <option value="relaxation">Relaxation</option>
+                                        <option value="culinary">Culinary</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn" style="width: 100%;">Find Your Journey</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Destinations Section -->
+        <section id="destinations" class="destinations">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Popular Destinations</h2>
+                    <p>Discover our most sought-after destinations that promise unforgettable experiences and moments of
+                        transformation.</p>
+                </div>
+
+                <div class="destinations-grid">
+                    <div class="destination-card" data-aos="fade-up">
+                        <div class="destination-img">
+                            <a href="#" data-lightbox="destinations" data-title="Bali, Indonesia">
+                                <img src="/assets/img/bali.jpeg" alt="beautiful sight of Bali in indonesia">
+                            </a>
+                        </div>
+                        <div class="destination-info">
+                            <h3>Bali, Indonesia</h3>
+                            <p>Discover spiritual awakening amid lush rice terraces and ancient temples.</p>
+                            <div class="destination-meta">
+                                <div class="destination-price">From $1,299</div>
+                                <div class="destination-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="destination-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="destination-img">
+                            <a href="#" data-lightbox="destinations" data-title="Kyoto, Japan">
+                                <img src="/assets/img/kyoto.jpeg" alt="Indian Bamboo stairs in Kyoto">
+                            </a>
+                        </div>
+                        <div class="destination-info">
+                            <h3>Kyoto, Japan</h3>
+                            <p>Experience the harmony of traditional culture in ancient temples and gardens.</p>
+                            <div class="destination-meta">
+                                <div class="destination-price">From $1,499</div>
+                                <div class="destination-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="destination-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="destination-img">
+                            <a href="#" data-lightbox="destinations" data-title="Santorini, Greece">
+                                <img src="/assets/img/santorini.jpg" alt="The all white view in santorini at the coast">
+                            </a>
+                        </div>
+                        <div class="destination-info">
+                            <h3>Santorini, Greece</h3>
+                            <p>Find serenity in the stunning contrast of blue domes against whitewashed buildings.</p>
+                            <div class="destination-meta">
+                                <div class="destination-price">From $1,799</div>
+                                <div class="destination-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="destination-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="destination-img">
+                            <a href="#" data-lightbox="destinations" data-title="Sedona, Arizona">
+                                <img src="/assets/img/sedeona.jpeg" alt="The red rocks of Sedona">
+                            </a>
+                        </div>
+                        <div class="destination-info">
+                            <h3>Sedona, Arizona</h3>
+                            <p>Connect with nature's energy in the red rock formations and vortex sites.</p>
+                            <div class="destination-meta">
+                                <div class="destination-price">From $1,199</div>
+                                <div class="destination-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="destination-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="destination-img">
+                            <a href="#" data-lightbox="destinations" data-title="Banff National Park, Alberta">
+                                <img src="/assets/img/banff.jpeg" alt="Snow-capped mountains in Banff">
+                            </a>
+                        </div>
+                        <div class="destination-info">
+                            <h3>Banff National Park, Alberta</h3>
+                            <p>Experience the breathtaking beauty of the Canadian Rockies.</p>
+                            <div class="destination-meta">
+                                <div class="destination-price">From $999</div>
+                                <div class="destination-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="destination-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="destination-img">
+                            <a href="#" data-lightbox="destinations" data-title="Tofino, British Columbia">
+                                <img src="/assets/img/tofino.jpeg" alt="Surfer riding a wave in Tofino">
+                            </a>
+                        </div>
+                        <div class="destination-info">
+                            <h3>Tofino, British Columbia</h3>
+                            <p>Discover the rugged beauty of the Pacific coast and go surfing.</p>
+                            <div class="destination-meta">
+                                <div class="destination-price">From $899</div>
+                                <div class="destination-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="destination-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="destination-img">
+                            <a href="#" data-lightbox="destinations" data-title="Quebec City, Quebec">
+                                <img src="/assets/img/quebec.jpeg" alt="Historic buildings in Quebec City">
+                            </a>
+                        </div>
+                        <div class="destination-info">
+                            <h3>Quebec City, Quebec</h3>
+                            <p>Step back in time and experience the charm of historic Quebec.</p>
+                            <div class="destination-meta">
+                                <div class="destination-price">From $799</div>
+                                <div class="destination-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="destination-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="destination-img">
+                            <a href="#" data-lightbox="destinations" data-title="Prince Edward Island">
+                                <img src="/assets/img/pei.jpeg" alt="Green hills and red sand beaches in PEI">
+                            </a>
+                        </div>
+                        <div class="destination-info">
+                            <h3>Prince Edward Island</h3>
+                            <p>Relax in the natural beauty of Canada's smallest province.</p>
+                            <div class="destination-meta">
+                                <div class="destination-price">From $699</div>
+                                <div class="destination-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>What Our Travelers Say</h2>
+                    <p>Real stories from real people who experienced the transformative power of our journeys.</p>
+                </div>
+
+                <div class="glide" data-aos="fade-up">
+                    <div class="glide__track" data-glide-el="track">
+                        <div class="glide__slides">
+                            <div class="glide__slide">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-img">
+                                        <img src="/assets/img/sarah.jpeg" alt="Sarah Johnson">
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>InnerOut helped me rediscover myself in the temples of Bali. The mindfulness
+                                            retreats and cultural immersion were perfectly balanced.</p>
+                                    </div>
+                                    <div class="testimonial-author">Sarah Johnson</div>
+                                    <div class="testimonial-location">New York, USA</div>
+                                </div>
+                            </div>
+
+                            <div class="glide__slide">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-img">
+                                        <img src="/assets/img/david.jpeg" alt="David Chen">
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>The Kyoto cultural experience was beyond anything I could have imagined.
+                                            Every
+                                            detail was thoughtfully planned, allowing me to fully connect with the
+                                            tradition.</p>
+                                    </div>
+                                    <div class="testimonial-author">David Chen</div>
+                                    <div class="testimonial-location">Toronto, Canada</div>
+                                </div>
+                            </div>
+
+                            <div class="glide__slide">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-img">
+                                        <img src="/assets/img/emma.jpeg" alt="Emma Rodriguez">
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>Watching the sunset in Santorini while reflecting on my journey was a
+                                            spiritual
+                                            experience. Thank you for creating these moments of transformation.</p>
+                                    </div>
+                                    <div class="testimonial-author">Emma Rodriguez</div>
+                                    <div class="testimonial-location">Madrid, Spain</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glide__bullets" data-glide-el="controls[nav]">
+                        <button class="glide__bullet" data-glide-dir="=0"></button>
+                        <button class="glide__bullet" data-glide-dir="=1"></button>
+                        <button class="glide__bullet" data-glide-dir="=2"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Inspirational Gallery</h2>
+                    <p>Glimpses of transformative moments and breathtaking landscapes from our journeys around the
+                        world.
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-aos="fade-up">
+                        <a href="#" data-lightbox="gallery" data-title="Meditation at Sunrise, Bali">
+                            <img src="/assets/img/med.jpeg" alt="Meditation at Sunrise">
+                        </a>
+                    </div>
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                        <a href="#" data-lightbox="gallery" data-title="Tea Ceremony, Kyoto">
+                            <img src="/assets/img/tea.jpeg" alt="Tea Ceremony">
+                        </a>
+                    </div>
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                        <a href="#" data-lightbox="gallery" data-title="Caldera View, Santorini">
+                            <img src="/assets/img/cal.jpeg" alt="Caldera View">
+                        </a>
+                    </div>
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                        <a href="#" data-lightbox="gallery" data-title="Red Rock Yoga, Sedona">
+                            <img src="/assets/img/red.jpeg" alt="Red Rock Yoga">
+                        </a>
+                    </div>
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#" data-lightbox="gallery" data-title="Market Exploration, Marrakech">
+                            <img src="/assets/img/mar.jpeg" alt="Market Exploration">
+                        </a>
+                    </div>
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+                        <a href="#" data-lightbox="gallery" data-title="Northern Lights, Iceland">
+                            <img src="/assets/img/nor.jpeg" alt="Northern Lights">
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-aos="fade-up">
+                        <a href="#" data-lightbox="gallery" data-title="Sunset in Paris, France">
+                            <img src="/assets/img/paris.jpeg" alt="Sunset in Paris">
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-aos="fade-up">
+                        <a href="#" data-lightbox="gallery" data-title="Mountain Landscape, Swiss Alps">
+                            <img src="/assets/img/mountain.jpeg" alt="Mountain Landscape">
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-aos="fade-up">
+                        <a href="#" data-lightbox="gallery" data-title="Beach Scene, Bora Bora">
+                            <img src="/assets/img/beach.jpeg" alt="Beach Scene">
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-aos="fade-up">
+                        <a href="#" data-lightbox="gallery" data-title="Cityscape, Tokyo, Japan">
+                            <img src="/assets/img/tokyo.jpeg" alt="Cityscape">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-container">
+                    <div class="stat-item" data-aos="fade-up">
+                        <div class="stat-number" data-count="15000">15,000+</div>
+                        <div class="stat-label">Travelers</div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-number" data-count="45">45+</div>
+                        <div class="sta0/600t-label">Destinations</div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-number" data-count="128">128+</div>
+                        <div class="stat-label">Experiences</div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-number" data-count="98">98%</div>
+                        <div class="stat-label">Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explore Section -->
+        <section id="explore" class="explore">
+            <div class="container">
+                <div class="explore-content">
+                    <div class="explore-text" data-aos="fade-right">
+                        <h2>How Travel Changes Your Perspective</h2>
+                        <p>At InnerOut, we believe travel is more than sightseeing—it's a pathway to self-discovery and
+                            personal growth. Our travelers report significant positive changes in multiple dimensions of
+                            wellbeing.</p>
+                        <p>From increased mindfulness and reduced stress to enhanced creativity and cultural awareness,
+                            the
+                            data shows that intentional travel experiences create lasting transformation.</p>
+                        <a href="#" class="btn">Learn About Our Approach</a>
+                    </div>
+                    <div class="explore-chart" data-aos="fade-left">
+                        <div class="chart-container">
+                            <canvas id="transformationChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section id="map-section" class="map-section">
+            <div id="map"></div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section id="newsletter" class="newsletter">
+            <div class="container">
+                <h2 data-aos="fade-up">Join Our Community</h2>
+                <p data-aos="fade-up">Subscribe to receive inspiration, exclusive offers, and mindful travel tips
+                    directly
+                    to your inbox.</p>
+                <form class="newsletter-form" data-aos="fade-up">
+                    <input type="email" class="newsletter-input" placeholder="Your email address">
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-col">
+                        <h3>Inner<span>Out</span></h3>
+                        <p>Transformative travel experiences that nurture your inner journey while exploring the outer
+                            world.</p>
+                        <div class="footer-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Explore</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Destinations</a></li>
+                            <li><a href="#">Experiences</a></li>
+                            <li><a href="#">Retreats</a></li>
+                            <li><a href="#">Wellness</a></li>
+                            <li><a href="#">Cultural Immersion</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Resources</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Travel Guide</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Mindfulness Tips</a></li>
+                            <li><a href="#">Photography</a></li>
+                            <li><a href="#">Travel Journal</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Contact</h3>
+                        <ul class="footer-contact">
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Serenity Way, Mindful City</li>
+                            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                            <li><i class="fas fa-envelope"></i> journey@innerout.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 InnerOut. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <a href="#" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.5.0/glide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE files
+.vscode/
+.idea/
+.eclipse/
+
+# Ignore build and compilation files
+node_modules/
+build/
+dist/
+target/
+
+# Ignore log files
+*.log
+
+# Ignore configuration files
+config.json
+.env
+
+# Ignore image and video files
+/assets/img/
+/assets/video/
+
+# Ignore package manager files
+package-lock.json
+yarn.lock
+
+# Ignore git files
+.gitattributes
